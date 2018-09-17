@@ -11,8 +11,8 @@ const
   videosRoutes = require('./routes/videos.js')
 ;
 
-mongoose.connect(MONGODB_URI, (err) => {
-  console.log(err || `🐙 Connected to Mongo @ ${MONGODB_URI}`)
+mongoose.connect(MONGODB_URI, { useNewUrlParser: true }, (err) => {
+  console.log(err || `🤟🏼  Connected to Mongo @ ${MONGODB_URI}`)
 });
 
 app.use(cors());

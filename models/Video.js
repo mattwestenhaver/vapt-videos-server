@@ -2,9 +2,10 @@ const
   mongoose = require('mongoose'),
 
   videoSchema = new mongoose.Schema({
-    url: {type: String, required: true},
+    url: {type: String, required: true, unique: true},
     title: {type: String, required: true},
-    thumbnail: {type: String, required: false}
+    thumbnail: {type: String, required: false},
+    uploadDate: {type: String, default: new Date()}
   })
 ;
 
