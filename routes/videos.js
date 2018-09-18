@@ -9,4 +9,8 @@ videosRouter.route('/')
   .post(videosController.create)
 ;
 
+videosRouter.route('/:id')
+  .patch(videosController.update)
+;
+
 module.exports = videosRouter
