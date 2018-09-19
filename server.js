@@ -6,7 +6,7 @@ const
   bodyParser = require('body-parser'),
   mongoose = require('mongoose'),
   app = express(),
-  MONGODB_URI = process.env.MONGODB_URI || 'mongodb://localhost/virtualapt',
+  MONGODB_URI = process.env.MONGODB_URI || 'mongodb://34.192.215.40/virtualapt',
   PORT = process.env.PORT || 3001,
   videosRoutes = require('./routes/videos.js')
 ;
