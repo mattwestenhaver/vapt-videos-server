@@ -9,15 +9,11 @@ videosRouter.route('/')
   .post(videosController.create)
 ;
 
-videosRouter.route('/search')
-  .get(videosController.search)
-;
-
 videosRouter.route('/:id')
   .patch(videosController.update)
 ;
 
-videosRouter.route('/:id/view')
+videosRouter.route('/view/:id')
   .patch(videosController.addView)
 ;
 
