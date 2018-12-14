@@ -5,6 +5,7 @@ const
     url: {type: String, required: true, unique: true},
     title: {type: String, required: true},
     thumbnail: {type: String, required: false},
+    industry: {type: String, required: true},
     viewCount: {type: Number, default: 0},
     uploadDate: {type: String, default: new Date()}
   })
