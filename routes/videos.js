@@ -9,8 +9,16 @@ videosRouter.route('/')
   .post(videosController.create)
 ;
 
+videosRouter.route('/search')
+  .get(videosController.search)
+;
+
 videosRouter.route('/:id')
   .patch(videosController.update)
+;
+
+videosRouter.route('/:id/view')
+  .patch(videosController.addView)
 ;
 
 module.exports = videosRouter

@@ -27,6 +27,24 @@ module.exports = {
         res.json({ success: true, message: "Video updated", updatedVideo })
       })
     })
+  },
+
+  addView: (req, res) => {
+    Video.findById(req.params.id, (err, video) => {
+      if(err) res.json({ success: false, code: err.code })
+      video.viewCount = video.viewCount + 1
+      video.save((err2, updatedVideo) => {
+        if(err2) res.json({ success: false, code: err2.code })
+        res.json({ success: true, message: "View count updated", updatedVideo })
+      })
+    })
   }
+
+  // search: (req, res) => {
+  //   Video.find({title: /req.body.title/i }, (err, videos) => {
+  //     if(err) return res.json({success: false, code: err.code})
+  //     res.json({success: true, videos})
+  //   })
+  // }
 
 }
