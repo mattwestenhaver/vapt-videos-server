@@ -7,6 +7,7 @@ const
     thumbnail: {type: String, required: false},
     industry: {type: String, default: null},
     viewCount: {type: Number, default: 0},
+    bestOf: {type: Boolean, required: true, default: false},
     uploadDate: {type: String, default: new Date()}
   })
 ;
