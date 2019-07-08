@@ -9,6 +9,10 @@ videosRouter.route('/')
   .post(videosController.create)
 ;
 
+videosRouter.route('/best')
+  .get(videosController.best)
+;
+
 videosRouter.route('/:id')
   .patch(videosController.update)
 ;

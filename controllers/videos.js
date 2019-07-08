@@ -11,6 +11,13 @@ module.exports = {
     })
   },
 
+  best: (req, res) => {
+    Video.find({ bestOf: true }, (err, videos) => {
+      if(err) return res.json({success: false, code: err.code})
+      res.json({success: true, videos})
+    })
+  },
+
   create: (req, res) => {
     Video.create(req.body, (err, video) => {
       if (err) return res.json({success: false, code: err.code})
