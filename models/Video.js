@@ -4,6 +4,7 @@ const
   videoSchema = new mongoose.Schema({
     url: {type: String, required: true, unique: true},
     title: {type: String, required: true},
+    client: {type: String, required: true, default: "VirtualAPT"},
     thumbnail: {type: String, required: false},
     industry: {type: String, default: null},
     viewCount: {type: Number, default: 0},
